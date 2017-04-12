@@ -1,0 +1,65 @@
+* {margin: 0; padding: 0; transition-duration: 600ms;}
+
+@font-face 
+{
+    font-family: 'igiari';
+    src: url('../res/igiari.ttf');
+}
+
+
+body
+{
+    background-color: #191714;
+    color: white;
+    font-family: 'igiari';
+    padding: 30px;
+    text-align: center;
+}
+
+h1, h2
+{
+
+    margin-top: 20px;
+}
+
+#newgame
+{
+    font-size: 28px;
+    color: #ff66cc;
+    border: 2px dashed #ff66cc;
+    margin: 40px 32% 0;
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+#game
+{
+    display: none;
+}
+
+#weapons, #enemyweapons
+{
+    margin: 15px;
+}
+
+#weapons img:hover
+{
+    cursor: pointer;
+    filter: drop-shadow(3px 3px 0px #ff66cc) drop-shadow(-3px -3px 0px #ff66cc);
+}
+
+#enemyweapons
+{
+    margin-top: 200px;
+    opacity: 0.7;
+}
+
+#result
+{
+    font-size: 22px;
+}
+
+.computerchoice
+{
+    filter: drop-shadow(3px 3px 0px #f00) drop-shadow(-3px -3px 0px #f00);
+}

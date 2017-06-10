@@ -5,8 +5,8 @@ var scis = document.getElementById("scis");
 var result = document.getElementById("result");
 var playerpoint = document.getElementById("playerpoints");
 var botpoint = document.getElementById("botpoints");
-botpoints=0;
-playerpoints=0;
+var botpoints=0;
+var playerpoints=0;
 var cChoice="";
 var pChoice="";
 var score="";
@@ -21,10 +21,8 @@ function startnewgame()
 newgame.onclick = startnewgame;
 
 
-    var playerChoice;    
-    rock.onclick = function fRock() {playerChoice=1; pChoice="kamień"; fComputerChoice();};
-    paper.onclick = function fPaper() {playerChoice=2; pChoice="papier"; fComputerChoice();};
-    scis.onclick = function fScior() {playerChoice=3; pChoice="nożyce"; fComputerChoice();};
+    var playerChoice;
+
 
 function fComputerChoice()
 {
@@ -52,11 +50,9 @@ function fComputerChoice()
         document.getElementById("enemyrock").setAttribute("class", "");
         document.getElementById("enemypaper").setAttribute("class", "");
         document.getElementById("enemyscis").setAttribute("class", "computerchoice");
-        
+
     }
-	
-	fResult();
-	
+
 	function fResult()
 		{
 		if(playerChoice == computerChoice)
@@ -103,7 +99,14 @@ function fComputerChoice()
 					}
 			}
 		}
-	playerpoint.innerHTML=playerpoints;
-	botpoint.innerHTML=botpoints;
+
+    	fResult();
+
+  	playerpoint.innerHTML=playerpoints;
+  	botpoint.innerHTML=botpoints;
     result.innerHTML="Wybrałeś "+pChoice+", wróg "+cChoice+". Oznacza to "+score+".";
 }
+
+rock.onclick = function fRock() {playerChoice=1; pChoice="kamień"; fComputerChoice();};
+paper.onclick = function fPaper() {playerChoice=2; pChoice="papier"; fComputerChoice();};
+scis.onclick = function fScior() {playerChoice=3; pChoice="nożyce"; fComputerChoice();};
